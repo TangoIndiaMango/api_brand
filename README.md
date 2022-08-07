@@ -68,14 +68,9 @@ One note before you delve into each endpoint,
 ### Endpoints
 
 
-- Add to settings.py
+- To access each endpoint
 ```bash
-URLS = {
-    path('admin/', admin.site.urls),
-    path('gateway/', include("gateway.urls")),
-    path("user-main/",include("user.urls")),
-    path("", include("customer.urls")),
-}
+- URL = https://dfb-api.herokuapp.com
 ```
 
 ## Documenting Endpoints
@@ -84,7 +79,7 @@ Here is a detailed documentation of the API endpoints including the URL, request
 
 ### Documentation Example
 
-`POST '/gateway/login'`
+`POST 'URL/gateway/login'`
 
 - Login a user
 - Request Arguments: POST
@@ -97,7 +92,7 @@ Here is a detailed documentation of the API endpoints including the URL, request
   "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2OTEyNDgyODUsImRhdGEiOiJGUUdXNkk5RVI1In0.Ww60EADUoe-IS8RNG-HxUTadlIJHRgo4rv1BkfNOUt8",
 }
 ```
-`POST '/gateway/register'`
+`POST 'URL/gateway/register'`
 
 - Register a user
 - Request Arguments: POST
@@ -110,7 +105,7 @@ Here is a detailed documentation of the API endpoints including the URL, request
 
 
 ```
-`GET '/customer'`
+`GET 'URL/customer'`
 
 - Fetches a dictionary of customer message in which the keys are the ids and the value is the corresponding string
 - Request Arguments: None
@@ -125,7 +120,7 @@ Here is a detailed documentation of the API endpoints including the URL, request
 }
 ```
 
-`POST '/customer'`
+`POST 'URL/customer'`
 
 - Add a dictionary of customer message into the database
 - Request Arguments: POST
@@ -140,7 +135,7 @@ Here is a detailed documentation of the API endpoints including the URL, request
 }
 ```
 
-`POST '/gateway/refresh'`
+`POST 'URL/gateway/refresh'`
 
 - Get refresh token
 - Request Arguments: POST
@@ -155,7 +150,7 @@ Here is a detailed documentation of the API endpoints including the URL, request
 }
 ```
 
-`GET '/user-main/uploads'`
+`GET 'URL/user-main/uploads'`
 - To post on Postman, use form-data
 - Fetches a dictionary of currrent user logged in with uploads
 - Request Arguments: None
@@ -170,7 +165,7 @@ Here is a detailed documentation of the API endpoints including the URL, request
   "Date": "2022-08-05",
 }
 ```
-`POST '/user-main/uploads'`
+`POST 'URL/user-main/uploads'`
 
 - Post a dictionary of files to be uploaded with current user
 - protected endpoint
